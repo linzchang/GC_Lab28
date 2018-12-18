@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Cards";
+}
+
+<h2>Show Cards</h2>
+
+@if (ViewBag.Cards != null)
+{
+    <table class="table">
+        @for (int i = 0; i < ViewBag.Cards.Count; i++)
+        {
+            <tr>
+                <td><img src="@ViewBag.Cards[i]["image"]" /></td>
+                <td>Name: @ViewBag.Cards[i]["value"] of @ViewBag.Cards[i]["suit"]</td>
+            </tr>
+        }
+    </table>
+}
+
+    <a href="~/API/DrawMoreCards" class="btn">Draw 5 More Cards</a>
