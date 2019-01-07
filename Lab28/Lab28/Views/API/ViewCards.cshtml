@@ -8,11 +8,17 @@
 @if (ViewBag.Cards != null)
 {
     <table class="table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            @*<th>Keep This Card?</th>*@
+        </tr>
         @for (int i = 0; i < ViewBag.Cards.Count; i++)
         {
             <tr>
                 <td><img src="@ViewBag.Cards[i]["image"]" /></td>
                 <td>Name: @ViewBag.Cards[i]["value"] of @ViewBag.Cards[i]["suit"]</td>
+                @*<td><form action="~/API/AddToPile" method="post"><input type="checkbox" value="@ViewBag.Cards[i]["code"]"/></form></td>*@
             </tr>
         }
     </table>

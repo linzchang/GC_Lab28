@@ -96,6 +96,13 @@ namespace Lab28.Controllers
 
             return RedirectToAction("ViewCards");
         }
+
+        public ActionResult AddToPile()
+        {
+            TempData["DeckID"] = TempData["DeckID"];
+
+            return RedirectToAction("ViewCards");
+        }
     }
 
 
